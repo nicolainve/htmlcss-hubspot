@@ -67,14 +67,30 @@ a {
   margin-right: 5px;
 }
 
-/* nav-button */
+/* nav-bottom */
 
-.nav-button {
-  height: 100px;
+.nav-bottom .page-width::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.nav-button .page-width {
-  background: grey;
+.nav-bottom-left a {
+  padding: 10px 15px 10px 0;
+  margin: 10px 15px 10px 0;
+}
+
+.nav-bottom-right a {
+  padding: 10px 0 10px 15px;
+  margin: 15px 0 10px 15px;
+}
+
+.nav-bottom-right a {
+  float: right;
+}
+
+.nav-bottom-left a {
+  float: left;
 }
 
 /* main */
