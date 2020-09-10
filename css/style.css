@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+.page-width {
+  max-width: 1080px;
+  height: 100%;
+  margin: auto;
+}
+
+/* header */
+
+.nav-top {
+  height: 100px;
+  background: #f5f8fa;
+}
+
+.nav-top .page-width {
+  background: violet;
+}
+
+.nav-button {
+  height: 100px;
+}
+
+.nav-button .page-width {
+  background: grey;
+}
+
+/* main */
+
+.jumbotron {
+  background: #fff3ee;
+  height: 300px;
+}
+
+.jumbotron .page-width {
+  background: violet;
+}
+
+.light-blue-rectangle {
+  background: #afebe4;
+  height: 100px;
+}
+
+.learn {
+  height: 600px;
+}
+
+.learn .page-width {
+  background: grey;
+}
+
+.grow {
+  height: 300px;
+  background: #00aab8;
+}
+
+.grow .page-width {
+  background: violet;
+}
+
+.start {
+  height: 300px;
+}
+
+.start .page-width {
+  background: grey;
+}
+
+/* footer */
+
+footer {
+  height: 300px;
+  background: #33475b;
+}
+
+.colomns {
+  height: 200px
+}
+
+.colomns .page-width {
+  background: violet;
+}
+
+.languages {
+  height: 50px;
+}
+
+.languages .page-width {
+  background: grey;
+}
+
+.credits {
+  height: 50px;
+}
+
+.credits .page-width {
+  background: violet;
+}
