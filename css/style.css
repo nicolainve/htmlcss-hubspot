@@ -19,6 +19,13 @@ a {
 body {
   margin-top: 72px;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* header */
 
 /* nav-top */
@@ -104,6 +111,8 @@ body {
 
 /* main */
 
+/* jumbotron */
+
 .jumbotron {
   background: #fff4ee;
   background-image: url(../img/jumbotron.png);
@@ -152,58 +161,166 @@ body {
   margin-bottom: -36px;
 }
 
+/* learn */
+
 .learn {
-  height: 600px;
+  background: #f5f8fa;
 }
 
-.learn .page-width {
-  background: grey;
+.learn-1 {
+  text-align: center;
 }
+
+.learn-1 img {
+  width: 30%;
+}
+
+.learn-1 h3 {
+  font-size: 30px;
+}
+
+.learn-1 p {
+  padding: 0 15%;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.learn-2 {
+  background: white;
+  padding: 0 130px;
+}
+
+.learn-2::after {
+content: "";
+display: table;
+clear: both;
+}
+
+.learn-2 .col-left {
+  width: 15%;
+  text-align: center;
+  float: left;
+  margin-right: 10%;
+}
+
+.learn-2 .col-right {
+  float: left;
+  width: 70%;
+}
+
+.learn-2 .col-right h2 {
+  display: inline-block;
+}
+
+.learn-2 .col-right hr {
+  text-align: right;
+  width: 50%;
+  vertical-align: middle;
+  text-align: right;
+  /* margin-left: 30px; */
+  display: inline-block;
+}
+
+/* learn-3 */
+
+.learn-3 .col {
+  float: left;
+  height: 300px;
+  width: calc(100% / 3);
+  background: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.learn-3 .col img {
+  width: 20%;
+}
+
+.learn-3 .col ul {
+  text-align: left;
+}
+
+/* grow */
 
 .grow {
-  height: 300px;
-  background: #00aab8;
+  background: linear-gradient(45deg,#00a4bd,#00bda5);
 }
 
 .grow .page-width {
-  background: violet;
+  text-align: center;
 }
 
-.start {
+.grid-box {
+  float: left;
+  width: calc(100% / 4);
+  height: 150px;
+}
+
+/* start */
+
+.rowww li {
+  display: inline-block;
+}
+
+.rowww img {
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* customers */
+
+.customers .box {
   height: 300px;
+  width: 50%;
+  float: left;
 }
 
-.start .page-width {
-  background: grey;
+.growing .box {
+  height: 300px;
+  width: 50%;
+  float: left;
+}
+
+.growing img {
+  width: 200px;
+  text-align: right;
+}
+
+.growing .right {
+  text-align: right;
 }
 
 /* footer */
 
 footer {
-  height: 300px;
   background: #33475b;
+  color: white;
 }
 
-.colomns {
-  height: 200px
-}
-
-.colomns .page-width {
-  background: violet;
+.colomns .col{
+  height: 200px;
+  float:left;
+  width: calc(100% / 4);
 }
 
 .languages {
   height: 50px;
+  text-align: center;
 }
 
-.languages .page-width {
-  background: grey;
+.languages li {
+  display: inline-block;
 }
-
-.credits {
+.credit {
+  float: left;
+  width: 50%;
   height: 50px;
 }
 
-.credits .page-width {
-  background: violet;
+.credits .right a {
+  display: inline-block;
+}
+
+.credits .right {
+  text-align: right;
 }
