@@ -5,10 +5,8 @@
   font-family: arial, sans-serif;
 }
 
-.page-width {
-  max-width: 1080px;
-  height: 100%;
-  margin: auto;
+body {
+  margin-top: 60px;
 }
 
 a {
@@ -16,8 +14,15 @@ a {
   color: inherit;
 }
 
-body {
-  margin-top: 72px;
+a.orange {
+  color: white;
+  background: #ff7a59;
+  border-radius: 5px;
+}
+
+.page-width {
+  max-width: 1080px;
+  margin: auto;
 }
 
 .clearfix::after {
@@ -31,82 +36,69 @@ body {
 /* nav-top */
 
 .nav-top {
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  position: fixed;
-  background: #f5f8fa;
-  border-bottom: 2px solid black;
   z-index: 2;
+  padding: 20px 0;
+  background: #f5f8fa;
+  border-bottom: 1px solid black;
 }
 
-.nav-top .page-width::after {
-  content: "";
-  display: table;
-  clear: both;
+.nav-top-left,
+.nav-top-right {
+  width: 50%;
+  float:left;
 }
 
-.nav-top-left a {
-  float: left;
-  margin: 15px 0;
+.nav-top-left .fa-angle-down {
+  padding-left: 5px;
+  padding-right: 20px;
+  border-right: 1px solid black;
+  margin-right: 10px;
+}
+
+.nav-top-right {
+  text-align: right;
+}
+
+.nav-top-right a {
   padding: 10px 20px;
-  font-size: 16px
 }
 
-.nav-top-left a:first-child {
-  border-right: 1px solid grey;
-}
-
-.nav-top-right a {
-  float: right;
-  margin: 15px 5px;
-  padding: 10px 15px;
-  font-size: 16px
-}
-
-.nav-top-right a {
-  border-radius: 5px;
-}
-
-.nav-top-right a:first-child {
-  background: #ff7a59;
-  color: white;
-}
-
-.nav-top-right a:first-child + a {
-  color: orange;
-  border: 2px solid orange;
-}
-
-.nav-top-right i {
-  color: #00a6c0;
-  margin-right: 5px;
+.fas.fa-search {
+  color: #17acc3;
 }
 
 /* nav-bottom */
 
-.nav-bottom .page-width::after {
-  content: "";
-  display: table;
-  clear: both;
+.nav-bottom {
+  padding: 20px 0;
 }
 
-.nav-bottom-left a {
-  padding: 10px 15px 10px 0;
-  margin: 10px 15px 10px 0;
-}
-
-.nav-bottom-right a {
-  padding: 10px 0 10px 15px;
-  margin: 15px 0 10px 15px;
-}
-
-.nav-bottom-right a {
-  float: right;
-}
-
-.nav-bottom-left a {
+.nav-bottom-left,
+.nav-bottom-right {
+  width: 50%;
   float: left;
+}
+
+.nav-bottom img {
+  vertical-align: middle;
+}
+
+.nav-bottom li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.nav-bottom-right i {
+  padding-left: 5px;
+}
+
+.nav-bottom ul {
+  text-align: right;
+  padding-top: 5px;
 }
 
 /* main */
