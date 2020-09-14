@@ -1,34 +1,76 @@
+/* GENERAL */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: arial, sans-serif;
 }
 
 body {
   margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: rgb(51, 71, 91);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* UTILITIES */
 
-a.orange {
-  color: white;
-  background: #ff7a59;
-  border-radius: 5px;
-}
-
-.page-width {
+/* Layout */
+.container {
   max-width: 1080px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+
+/* Tipography */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Menu */
+ul.list-inline li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+ul.list-inline li:first-child {
+  padding-left: 0
+}
+
+ul.list-inline li:last-child {
+  padding-right: 0
+}
+
+/* Buttons */
+
+.bt-orange {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+  line-height: 16px;
+  font-size: 14px;
+  background: #ff7a59;
+  border-radius: 5px;
+}
+
+.bt-white {
+  color: #ff7a59;
+  background: white;
+  border: 1px solid #ff7a59;
 }
 
 /* header */
@@ -40,8 +82,8 @@ a.orange {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
-  padding: 20px 0;
+  z-index: 1;
+  line-height: 60px;
   background: #f5f8fa;
   border-bottom: 1px solid black;
 }
@@ -52,36 +94,14 @@ a.orange {
   float:left;
 }
 
-.nav-top-left .fa-angle-down {
-  padding-left: 5px;
-  padding-right: 20px;
-  border-right: 1px solid black;
-  margin-right: 10px;
-}
-
-.nav-top-right {
-  text-align: right;
-}
-
-.nav-top-right a {
-  padding: 10px 20px;
-}
-
 .fas.fa-search {
   color: #17acc3;
-}
-
-.nav-top-right a:nth-child(2) {
-  color: #ff7a59;
-  border: 1px solid #ff7a59;
-  border-radius: 5px;
-  margin-right: 10px;
 }
 
 /* nav-bottom */
 
 .nav-bottom {
-  padding: 20px 0;
+  line-height: 60px;
 }
 
 .nav-bottom-left,
@@ -94,33 +114,20 @@ a.orange {
   vertical-align: middle;
 }
 
-.nav-bottom li {
-  display: inline-block;
-  padding-left: 20px;
-}
-
-.nav-bottom-right i {
-  padding-left: 5px;
-}
-
-.nav-bottom ul {
-  text-align: right;
-  padding-top: 5px;
-}
-
 /* main */
 
 /* jumbotron */
 
 .jumbotron {
+  position: relative;
   background: #fff4ee;
   background-image: url(../img/jumbotron.png);
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   height: 600px;
 }
 
-.jumbotron .page-width {
+.jumbotron .container {
   padding: 40px 0;
 }
 
@@ -149,15 +156,16 @@ a.orange {
   font-size: 12px;
 }
 
-.light-blue-rectangle {
-  z-index: 1;
-  position: relative;
-  top: -36px;
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
   background: #afebe4;
-  height: 100px;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  margin-bottom: -36px;
 }
 
 /* learn */
@@ -167,7 +175,6 @@ a.orange {
 }
 
 .learn-1 {
-  text-align: center;
   padding-top: 20px;
 }
 
@@ -191,15 +198,8 @@ a.orange {
   margin-bottom: 30px;
 }
 
-.learn-2::after {
-content: "";
-display: table;
-clear: both;
-}
-
 .learn-2 .col-left {
   width: 15%;
-  text-align: center;
   float: left;
   margin-right: 10%;
 }
@@ -214,11 +214,8 @@ clear: both;
 }
 
 .learn-2 .col-right hr {
-  text-align: right;
   width: 50%;
   vertical-align: middle;
-  text-align: right;
-  /* margin-left: 30px; */
   display: inline-block;
 }
 
@@ -264,7 +261,7 @@ clear: both;
 
 /* grow */
 
-.grow .page-width {
+.grow .container {
   padding: 30px 0;
 }
 
@@ -272,8 +269,7 @@ clear: both;
   background: linear-gradient(45deg,#00a4bd,#00bda5);
 }
 
-.grow .page-width {
-  text-align: center;
+.grow .container {
   color: white;
 }
 
@@ -336,10 +332,6 @@ clear: both;
   width: 200px;
 }
 
-.growing .right {
-  text-align: right;
-}
-
 .start h2 {
   font-size: 40px;
 }
@@ -351,7 +343,7 @@ footer {
   color: white;
 }
 
-footer .page-width {
+footer .container {
   padding: 30px 0;
 }
 
@@ -371,24 +363,15 @@ footer .page-width {
 }
 
 .languages {
-  height: 50px;
-  text-align: center;
-}
-
-.languages li {
-  display: inline-block;
+  margin: 30px 0;
 }
 
 .credit {
   float: left;
   width: 50%;
-  height: 50px;
-}
-
-.credits .right a {
-  display: inline-block;
 }
 
 .credits .right {
-  text-align: right;
+  vertical-align: bottom;
+  line-height: 100%;
 }
