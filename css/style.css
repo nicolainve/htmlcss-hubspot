@@ -38,6 +38,15 @@ h1 {
   font-size: 50px;
 }
 
+h4 {
+  margin: 20px;
+}
+
+p {
+  margin: 20px 0;
+  line-height: 30px;
+}
+
 .text-right {
   text-align: right;
 }
@@ -70,6 +79,10 @@ ul.list-inline li:last-child {
   font-size: 14px;
   background: #ff7a59;
   border-radius: 5px;
+}
+
+.bt-big {
+  padding: 20px 40px;
 }
 
 .bt-white {
@@ -129,7 +142,7 @@ ul.list-inline li:last-child {
   background-image: url(../img/jumbotron.png);
   background-position: right;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 500px;
 }
 
 .jumbotron .container {
@@ -141,15 +154,6 @@ ul.list-inline li:last-child {
   font-size: 15px;
   line-height: 25px;
   margin: 20px 0;
-}
-
-.jumbotron a {
-  font-size: 20px;
-  padding: 20px 30px;
-  background: #ff7a59;
-  color: white;
-  border-radius: 5px;
-  display: inline-block;
 }
 
 .jumbotron p:last-child {
@@ -221,6 +225,11 @@ ul.list-inline li:last-child {
   display: inline-block;
 }
 
+.learn-2 p {
+  line-height: 1.80;
+  margin: 20px 0;
+}
+
 .fa-check-circle {
   margin-right: 10px;
   color: #ff7a59;
@@ -260,6 +269,7 @@ ul.list-inline li:last-child {
 .learn-3 .col ul {
   text-align: left;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 .learn-3 .left {
@@ -352,6 +362,7 @@ ul.list-inline li:last-child {
 footer {
   background: #33475b;
   color: white;
+  margin-top: 20px;
 }
 
 footer .container {
