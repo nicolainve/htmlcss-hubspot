@@ -249,7 +249,7 @@ ul.list-inline li:last-child {
   width: 32%;
   background: white;
   text-align: center;
-  padding: 30px;
+  padding: 37px;
   height: 512px;
 }
 
@@ -263,11 +263,7 @@ ul.list-inline li:last-child {
 }
 
 .learn-3 .col img {
-  width: 20%;
-}
-
-.learn-3 .col:nth-child(2) img {
-  width: 25%;
+  height: 58px;
 }
 
 .learn-3 .col ul {
