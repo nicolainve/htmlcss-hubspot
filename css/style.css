@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
 }
 
+.container-padding {
+  padding: 30px 0;
+}
+
 .clearfix::after {
   content: "";
   display: table;
@@ -34,17 +38,36 @@ a {
 }
 
 h1 {
-  font-weight: bold;
   font-size: 50px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 20px 0;
 }
 
 h4 {
-  margin: 20px;
+  font-size: 20px;
+  margin: 20px 0;
 }
 
 p {
   margin: 20px 0;
   line-height: 30px;
+}
+
+p.small {
+  font-size: 12px;
+}
+
+.text-white {
+  color: white;
 }
 
 .text-right {
@@ -89,6 +112,19 @@ ul.list-inline li:last-child {
   color: #ff7a59;
   background: white;
   border: 1px solid #ff7a59;
+}
+
+.bt-footer {
+  background: white;
+  color: #33475b;
+}
+
+.bt-orange:hover {
+  background: rgba(255, 122, 89, 0.5)
+}
+
+.bt-footer:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 /* header */
@@ -144,24 +180,13 @@ ul.list-inline li:last-child {
   position: relative;
   background: #fff4ee;
   background-image: url(../img/jumbotron.png);
-  background-position: right;
+  background-position: right bottom;
   background-repeat: no-repeat;
-  height: 500px;
-}
-
-.jumbotron .container {
-  padding: 40px 0;
+  height: 600px;
 }
 
 .jumbotron p {
   width: 500px;
-  font-size: 15px;
-  line-height: 25px;
-  margin: 20px 0;
-}
-
-.jumbotron p:last-child {
-  font-size: 12px;
 }
 
 .jumbotron::before {
@@ -170,7 +195,7 @@ ul.list-inline li:last-child {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 32px;
+  height: 80px;
   background: #afebe4;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
@@ -180,10 +205,6 @@ ul.list-inline li:last-child {
 
 .learn {
   background: #f5f8fa;
-}
-
-.learn-1 {
-  padding-top: 20px;
 }
 
 .learn-1 img {
@@ -196,7 +217,6 @@ ul.list-inline li:last-child {
 
 .learn-1 p {
   padding: 0 15%;
-  line-height: 30px;
   margin-bottom: 40px;
 }
 
@@ -204,14 +224,17 @@ ul.list-inline li:last-child {
   background: white;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  padding: 50px 130px;
   margin-bottom: 30px;
 }
 
 .learn-2 .col-left {
-  width: 15%;
+  width: 30%;
   float: left;
-  margin-right: 10%;
+}
+
+.learn-2 img {
+  height: 100px;
+  margin-bottom: 20px;
 }
 
 .learn-2 .col-right {
@@ -221,17 +244,13 @@ ul.list-inline li:last-child {
 
 .learn-2 .col-right h4 {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .learn-2 .col-right hr {
   width: 50%;
-  vertical-align: middle;
   display: inline-block;
-}
-
-.learn-2 p {
-  line-height: 1.80;
-  margin: 20px 0;
+  margin-left: 50px;
 }
 
 .fa-check-circle {
@@ -244,26 +263,16 @@ ul.list-inline li:last-child {
 .learn-3 .col {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  margin-bottom: 30px;
   float: left;
   width: 32%;
   background: white;
   text-align: center;
   padding: 37px;
-  height: 512px;
 }
 
-.learn-3 .col p {
-  line-height: 30px;
-  margin: 20px 0;
-}
-
-.learn-3 .col h4 {
-  margin: 20px 0;
-}
-
-.learn-3 .col img {
-  height: 58px;
+.learn-3 img {
+  height: 90px;
+  margin-bottom: 20px;
 }
 
 .learn-3 .col ul {
@@ -282,20 +291,8 @@ ul.list-inline li:last-child {
 
 /* grow */
 
-.grow .container {
-  padding: 30px 0;
-}
-
 .grow {
   background: linear-gradient(45deg,#00a4bd,#00bda5);
-}
-
-.grow .container {
-  color: white;
-}
-
-.grid {
-  margin: 20px 0;
 }
 
 .grid-box {
@@ -336,7 +333,6 @@ ul.list-inline li:last-child {
 .customers .box {
   width: 50%;
   float: left;
-  padding: 50px 0;
 }
 
 .customers .box.right img {
@@ -353,49 +349,33 @@ ul.list-inline li:last-child {
   width: 200px;
 }
 
-.start h2 {
-  font-size: 40px;
-}
-
 /* footer */
 
 footer {
   background: #33475b;
-  color: white;
-  margin-top: 20px;
-}
-
-footer .container {
-  padding: 30px 0;
 }
 
 .colomns .col{
   float:left;
-  width: calc(100% / 4);
+  width: 25%;
 }
 
 .colomns .col ul {
   list-style: none;
-  margin-top: 30px;
 }
 
 .colomns .col li {
-  margin-top: 20px;
+  margin-bottom: 20px;
   color: #cbd6e2;
 }
 
 .languages {
-  margin: 15px 0;
-  padding: 15px 0;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
   border-bottom: 2px solid white;
 }
 
 .credit {
   float: left;
   width: 50%;
-}
-
-.credits .right {
-  vertical-align: bottom;
-  line-height: 100%;
 }
